@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --color-charcoal: #121212;
+  --color-paper: #f2f2f2;
+  --color-blood: #bc002d;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  color: var(--color-paper);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Parchment / ink-wash texture background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-charcoal);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* Subtle vignette / paper gradient */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 90% 70% at 50% 40%,
+    transparent 40%,
+    rgba(0,0,0,0.3) 100%
+  );
+  pointer-events: none;
+}
+
+/* Serif for titles */
+h1, h2, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Monospace for wisdom text */
+p, blockquote, .font-mono {
+  font-family: var(--font-mono);
+}
