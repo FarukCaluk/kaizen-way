@@ -258,7 +258,7 @@ export default function ScrollOfWisdom() {
   return (
     <div
       className="relative w-full min-h-screen bg-[#0B0B0C] flex flex-col
-                 items-center justify-center px-5 md:px-10 py-24 overflow-hidden
+                 items-center justify-center px-5 md:px-10 pt-14 pb-28 md:py-24 overflow-hidden
                  cursor-pointer select-none"
       onClick={draw}
       role="main"
@@ -442,13 +442,13 @@ export default function ScrollOfWisdom() {
             fill="none" strokeLinecap="round" />
         </svg>
       </div>
-      <div className="absolute bottom-20 left-8 pointer-events-none opacity-30" aria-hidden>
+      <div className="absolute bottom-32 md:bottom-20 left-8 pointer-events-none opacity-30" aria-hidden>
         <svg width="28" height="28" viewBox="0 0 28 28">
           <path d="M 2,2 L 2,26 L 26,26" stroke="rgba(212,175,55,0.4)" strokeWidth="1"
             fill="none" strokeLinecap="round" />
         </svg>
       </div>
-      <div className="absolute bottom-20 right-8 pointer-events-none opacity-30" aria-hidden>
+      <div className="absolute bottom-32 md:bottom-20 right-8 pointer-events-none opacity-30" aria-hidden>
         <svg width="28" height="28" viewBox="0 0 28 28">
           <path d="M 26,2 L 26,26 L 2,26" stroke="rgba(212,175,55,0.4)" strokeWidth="1"
             fill="none" strokeLinecap="round" />

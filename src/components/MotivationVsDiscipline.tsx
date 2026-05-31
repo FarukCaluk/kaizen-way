@@ -535,7 +535,7 @@ export default function MotivationVsDiscipline() {
   return (
     <section
       className="relative w-full min-h-screen bg-[#0B0B0C] overflow-x-hidden
-                 flex flex-col items-center justify-center px-5 md:px-10 py-24 gap-14"
+                 flex flex-col items-center justify-center px-5 md:px-10 pt-14 pb-28 md:py-24 gap-10 md:gap-14"
     >
       {/* Ambient wash */}
       <div
